@@ -1,13 +1,16 @@
 server:
   port: 9091
+  host: http://${eureka.instance.hostname}:${server.port}
 
 eureka:
   instance:
     hostname: localhost
+    health-check-url-path: /actuator/health
   client:
-    registerWithEureka: true
+    registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
+    wait-time-in-ms-when-sync-empty: 3000
 
