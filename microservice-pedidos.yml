@@ -21,7 +21,7 @@ spring:
         url: jdbc:mysql://localhost/microservice-pedidos?verifyServerCertificate=false&useSSL=false&requireSSL=false
         username: root
     jpa:
-        database-platform: org.hibernate.dialect.MySQLDialect
+        database-platform: org.hibernate.dialect.MySQL5Dialect
         generate-ddl: false
         hibernate:
             ddl-auto: create
